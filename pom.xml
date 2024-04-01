@@ -57,6 +57,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				 <version>2.6.2</version> <!-- Update to your version -->
+			            <configuration>
+			                <compilerArguments>
+			                    <source>11</source> <!-- Java source version -->
+			                    <target>11</target> <!-- Java target version -->
+			                </compilerArguments>
+			            </configuration>
 			</plugin>
 		</plugins>
 	</build>
