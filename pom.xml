@@ -5,8 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.0</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>2.6.3</version> <!-- Update to the latest stable version -->
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>MiniAssignment2</artifactId>
@@ -14,13 +13,13 @@
 	<name>MiniAssignment2</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version> <!-- Update to Java 11 -->
 	</properties>
 	<dependencies>
 		<dependency>
-        	<groupId>com.fasterxml.jackson.core</groupId>
-        	<artifactId>jackson-databind</artifactId>
-        </dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -29,7 +28,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -47,23 +45,26 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-    		<groupId>org.springframework.boot</groupId>
-    		<artifactId>spring-boot-starter-webflux</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
-    </dependencies>
+	</dependencies>
 
 	<build>
 		<plugins>
-			 <plugin>
-            			<groupId>org.apache.maven.plugins</groupId>
-            			<artifactId>maven-compiler-plugin</artifactId>
-            			<version>3.11.8</version> <!-- Or a higher version that supports Java 17 -->
-            			<configuration>
-                			<source>17</source>
-                			<target>17</target>
-            			</configuration>
-        		</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version> <!-- Update to the latest version compatible with Java 11 -->
+				<configuration>
+					<source>11</source>
+					<target>11</target>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
-
 </project>
